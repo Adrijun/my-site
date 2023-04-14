@@ -1,0 +1,105 @@
+.full-height {
+  height: calc(100vh - 5rem);
+  background-color: #ffffff;
+  color: #000000;
+
+  h1 {
+    z-index: 1;
+    font-size: 4em;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+.left-box,
+.right-box {
+  position: absolute;
+  top: 25%;
+  width: 50vh;
+  height: 50vh;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  clip-path: circle(50% at 50% 50%);
+  border-radius: 50%;
+}
+
+.left-box {
+  animation: left-box-animation 1s forwards, left-box-fadeout 1s forwards 2.5s;
+}
+
+.right-box {
+  animation: right-box-animation 1s forwards, right-box-fadeout 1s forwards 2.5s;
+}
+
+.box {
+  height: 100%;
+}
+
+@keyframes left-box-animation {
+  from {
+    transform: translateX(-500px) rotate(0deg);
+  }
+  to {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+@keyframes right-box-animation {
+  from {
+    transform: translateX(200px) rotate(0deg);
+  }
+  to {
+    transform: translateX(0) rotate(-360deg);
+  }
+}
+
+@keyframes left-box-fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes right-box-fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.left-box::before,
+.right-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    closest-side at 60% 55%,
+    rgb(27, 29, 32),
+    rgb(28, 41, 45),
+    rgb(24, 107, 102)
+  );
+}
+
+.left-box::before {
+  right: 0;
+  border-radius: 50%;
+}
+
+.right-box::after {
+  left: 0;
+  border-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  #mainWelcome {
+    font-family: 2px;
+  }
+}
