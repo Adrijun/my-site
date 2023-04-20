@@ -8,10 +8,15 @@ const HamburgerMenu = () => {
 
   const handleMenuClick = () => {
     setMenuOpen(!menuOpen);
+    if (menuOpen) {
+      document.body.style.marginRight = '5%';
+    } else {
+      document.body.style.marginRight = '5%';
+    }
   };
 
   return (
-    <Navbar bg="white" expand="lg">
+    <Navbar expand="lg">
       <Navbar.Brand href="main">
         <h1 id="jonaseriksson">Jonas Eriksson</h1>
       </Navbar.Brand>
@@ -20,8 +25,8 @@ const HamburgerMenu = () => {
         <span className={`menu-icon-bar ${menuOpen ? 'open' : ''}`} />
         <span className={`menu-icon-bar ${menuOpen ? 'open' : ''}`} />
       </Navbar.Toggle>
-      <Navbar.Collapse id="basic-navbar-nav  " className="justify-content-end">
-        <Nav className="ml-auto">
+      <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+        <Nav className="ml-auto" style={{ float: 'right' }}>
           <Nav.Link href="/portfolio">
             <h2>Portfolio</h2>
           </Nav.Link>
