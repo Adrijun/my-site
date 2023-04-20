@@ -1,8 +1,11 @@
 #jonaseriksson {
-  margin-left: 2%;
+  margin-left: 5%;
   margin-top: 2%;
   font-family: bolder;
   font-family: 'Montserrat', sans-serif;
+}
+h2 {
+  color: rgb(24, 107, 102);
 }
 
 .menu-icon-bar {
@@ -13,23 +16,49 @@
   transition: all 0.3s ease-in-out;
   background-color: #333;
 }
+
 .navbar-toggler {
+  margin-right: 2%;
   border: none;
 }
 .navbar-toggler-collapsed {
+  margin-right: 5%;
   border: none;
 }
 
-.open:nth-of-type(1) {
-  transform: translateY(6px) rotate(45deg);
+.open {
+  margin-right: 5%;
+  background-color: rgb(24, 107, 102);
 }
 
-.open:nth-of-type(2) {
+.open:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 7px);
+}
+
+.open:nth-child(2) {
   opacity: 0;
 }
 
-.open:nth-of-type(3) {
-  transform: translateY(-6px) rotate(-45deg);
+.open:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -7px);
+}
+
+.navbar-collapse.show .ml-auto {
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+
+.navbar-nav {
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 5%;
 }
 
 .navbar a {
