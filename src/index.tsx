@@ -6,8 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Structure } from './components/Structure/Structure';
 import Main from './components/Main/Main';
 import Portfolio from './components/Portfolio/Portfolio';
-import Contact from './components/Contact/Contact';
-import CV from './components/CV/CV';
+import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
 
 const root = ReactDOM.createRoot(
@@ -21,9 +20,7 @@ root.render(
           <Route index element={<Main />} />
           <Route path="/main" element={<Main />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/cv" element={<CV />} />
-          <Route path="/contact" element={<Contact />} />
-
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

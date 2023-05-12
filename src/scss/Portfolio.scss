@@ -1,15 +1,42 @@
-.box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-}
+// .box-container {
+//   // display: grid;
+//   // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//   // gap: 1rem;
+// }
 
-.box {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-}
+// .box {
+//   display: flex;
+//   flex-direction: row;
+//   height: 100%;
+// }
 
-.box-content {
-  flex: 1;
+// .box-content {
+//   flex: 1;
+// }
+// #projects-header-one {
+//   margin-top: 20%;
+// }
+img {
+  border-radius: 2%;
+}
+@media (max-width: 768px) {
+  #projects-header-one {
+    margin-top: 30%;
+    // padding-left: 5%;
+  }
+  // main {
+  //   margin-top: 30%;
+  // }
+  .box {
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  #projects-header-one {
+    font-size: 2rem;
+  }
+  #portfolio {
+    margin-bottom: 20%;
+  }
 }
