@@ -1,0 +1,29 @@
+body {
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px; /* eller annan storlek beroende på behov */
+  }
+  button {
+    margin: 10px;
+  }
+  // header {
+  //   height: 100vh;
+  // }
+}
+// main {
+//   height: 100vh;
+//   border: 2px solid green;
+//   position: relative;
+//   padding-bottom: 100vh; /* Lägg till samma höjd som footer elementet */
+// }
+
+// // footer {
+// //   height: 100vh;
+// //   border: 2px solid red;
+// //   margin-bottom: 0;
+// //   position: sticky;
+// //   bottom: 0;
+// // }

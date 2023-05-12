@@ -1,0 +1,103 @@
+#jonaseriksson {
+  margin-left: 5%;
+  margin-top: 2%;
+  font-size: 1.5rem;
+}
+h2 {
+  color: rgb(24, 107, 102);
+}
+
+.menu-icon-bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #333;
+}
+
+.navbar-toggler {
+  margin-right: 2%;
+  border: none;
+}
+.navbar-toggler-collapsed {
+  margin-right: 5%;
+  border: none;
+}
+
+.open {
+  margin-right: 5%;
+  background-color: rgb(24, 107, 102);
+}
+
+.open:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 7px);
+}
+
+.open:nth-child(2) {
+  opacity: 0;
+}
+
+.open:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -7px);
+}
+
+.navbar-collapse.show .ml-auto {
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+
+.navbar-nav {
+  margin: 10px;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 5%;
+}
+
+.navbar a {
+  position: relative;
+}
+
+.navbar a:after {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 2px;
+  bottom: 20%;
+  left: 10%;
+  background-color: #333;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar a:hover:after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar {
+    margin-right: 10%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+  }
+  .navbar a:hover:after {
+    visibility: hidden;
+    transform: scaleX(0);
+  }
+  .navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+  }
+}

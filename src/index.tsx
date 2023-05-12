@@ -1,15 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Structure } from './components/Structure/Structure';
+import Main from './components/Main/Main';
+import Portfolio from './components/Portfolio/Portfolio';
+import About from './components/About/About';
+import NotFound from './components/NotFound/NotFound';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Structure />}>
+          <Route index element={<Main />} />
+          <Route path="/main" element={<Main />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
