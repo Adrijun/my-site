@@ -6,6 +6,7 @@ import '../../scss/Main.scss';
 import anonymPortfolio from '../../assets/images/anonymPortfoliojpg.jpg';
 import majojo from '../../assets/images/Majojo.jpg';
 import portfolioImage from '../../assets/images/marten-bjork-6dW3xyQvcYE-unsplash.jpg';
+import { Link } from 'react-router-dom';
 
 function Main() {
   const [scrollY, setScrollY] = useState(0);
@@ -22,13 +23,13 @@ function Main() {
     };
   }, []);
 
-  const redValue = Math.max(255 - scrollY, 24);
-  const greenValue = Math.max(255 - scrollY, 107);
-  const blueValue = Math.max(255 - scrollY, 102);
+  const redValue = Math.max(255 - scrollY, 20);
+  const greenValue = Math.max(255 - scrollY, 210);
+  const blueValue = Math.max(255 - scrollY, 110);
   const colorValue = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
 
   return (
-    <main className="bg-white">
+    <main className="">
       <section className="full-height d-flex align-items-center justify-content-center">
         <article className="d-flex flex-column align-items-start">
           <h1
@@ -45,79 +46,68 @@ function Main() {
             Frontend Web Developer
           </h2>
         </article>
-
         <section className="left-box">
           <article></article>
         </section>
-
         <section className="right-box">
           <article></article>
         </section>
+        <div className="transparent-overlay"></div> {/* Lägg till detta */}
       </section>
 
       <section className="box-wrapper">
         <Container>
           <Row>
             <Col md={6} lg={4}>
-              <Card className="bg-white shadow rounded p-1 mb-4">
-                <Card.Img
-                  variant="top"
-                  src={anonymPortfolio}
-                  alt="Anonymous project"
-                  className="img-fluid mb-3 custom-img"
-                  width={300}
-                  height={200}
-                />
-                <Card.Body>
-                  <Card.Title>Anonymous</Card.Title>
-                  <Card.Text>
-                    This is my thesis. With coordinates retrieved from an API,
-                    they are drawn on a canvas stage.
-                  </Card.Text>
-                  <Button href="/portfolio#anonymous" variant="outline-dark">
-                    Read more
-                  </Button>
-                </Card.Body>
-              </Card>
+              <div className="card-image-wrapper">
+                <Link to="/portfolio#anonymous">
+                  <Card.Img
+                    variant="top"
+                    src={anonymPortfolio}
+                    alt="Anonymous project"
+                    className="img-fluid mb-3 custom-img cardImage"
+                    width={300}
+                    style={{ height: '50vh' }}
+                  />
+                  <div className="overlay" style={{ height: '50vh' }}>
+                    <h3 className="cardsText">Anonymous</h3>
+                  </div>
+                </Link>
+              </div>
             </Col>
             <Col md={6} lg={4}>
-              <Card className="bg-white shadow rounded p-1 mb-4">
-                <Card.Img
-                  variant="top"
-                  src={majojo}
-                  alt="The restaurant project"
-                  className="img-fluid mb-3 custom-img"
-                />
-                <Card.Body>
-                  <Card.Title>The restaurant</Card.Title>
-                  <Card.Text>
-                    My first group work in React where we had to make a website
-                    for a restaurant and where it was possible to book a table.
-                    <br />
-                    <em>Bon Appétit</em>
-                  </Card.Text>
-                  <Button href="/portfolio#restaurant" variant="outline-dark">
-                    Read more
-                  </Button>
-                </Card.Body>
-              </Card>
+              <div className="card-image-wrapper">
+                <Link to="/portfolio#restaurant">
+                  <Card.Img
+                    variant="top"
+                    src={majojo}
+                    alt="Anonymous project"
+                    className="img-fluid mb-3 custom-img cardImage"
+                    width={300}
+                    style={{ height: '50vh' }}
+                  />
+                  <div className="overlay" style={{ height: '50vh' }}>
+                    <h3 className="cardsText">The Restaurant</h3>
+                  </div>
+                </Link>
+              </div>
             </Col>
             <Col md={6} lg={4}>
-              <Card className="bg-white shadow rounded p-1 mb-4">
-                <Card.Img
-                  variant="top"
-                  src={portfolioImage}
-                  alt="The restaurant project"
-                  className="img-fluid mb-3 custom-img"
-                />
-                <Card.Body>
-                  <Card.Title>My Portfolio</Card.Title>
-                  <Card.Text>This is my portfolio.</Card.Text>
-                  <Button href="/portfolio#portfolio" variant="outline-dark">
-                    Read more
-                  </Button>
-                </Card.Body>
-              </Card>
+              <div className="card-image-wrapper">
+                <Link to="/portfolio#portfolio">
+                  <Card.Img
+                    variant="top"
+                    src={portfolioImage}
+                    alt="Anonymous project"
+                    className="img-fluid mb-3 custom-img cardImage"
+                    width={300}
+                    style={{ height: '50vh' }}
+                  />
+                  <div className="overlay" style={{ height: '50vh' }}>
+                    <h3 className="cardsText">My Portfolio</h3>
+                  </div>
+                </Link>
+              </div>
             </Col>
           </Row>
         </Container>

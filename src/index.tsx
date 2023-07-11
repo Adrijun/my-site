@@ -5,27 +5,31 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Structure } from './components/Structure/Structure';
 import Main from './components/Main/Main';
-import Portfolio from './components/Portfolio/Portfolio';
+import Portfolio from './components/Portfolio/Projects';
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
-
+import '../src/scss/Structure.scss';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Structure />}>
-          <Route index element={<Main />} />
-          <Route path="/main" element={<Main />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+  <>
+    <div id="bg">
+      <React.StrictMode>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Structure />}>
+              <Route index element={<Main />} />
+              <Route path="/main" element={<Main />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/about" element={<About />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </React.StrictMode>
+    </div>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function

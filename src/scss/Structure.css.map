@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,AAAC,CACH,WAAW,CAAE,wBAAwB,CACtC",
-    "sources": [
-        "Structure.scss"
-    ],
-    "names": [],
-    "file": "Structure.css"
-}
+{"version":3,"sources":["Structure.scss"],"names":[],"mappings":"AAAA,KACE,WAAA,CACA,kCAAA,CACA,kDAAA,CACA,WAAA,CACA,yBAAA,CACA,OACE,gBAAA,CACA,eAAA,CACA,UAAA,CAGJ,yBACE,eACE,UAAA,CAEF,GACE,UAAA,CAEF,GACE,UAAA,CAAA","file":"Structure.css"}

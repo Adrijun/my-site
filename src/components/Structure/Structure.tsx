@@ -15,6 +15,7 @@ export function Structure() {
 
   return (
     <>
+      {/* <div className="bg"> */}
       <header>
         <NavBar onContactClick={handleContactClick} />
       </header>
@@ -25,6 +26,7 @@ export function Structure() {
       <footer ref={footerRef}>
         <Footer />
       </footer>
+      {/* </div> */}
     </>
   );
 }

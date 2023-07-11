@@ -1,29 +1,23 @@
 body {
   margin: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica', sans-serif;
+  background-image: url('../assets/images/sep09.jpg');
+  height: 100%;
+  background-position: fixed;
   p {
-    font-size: 16px;
+    font-size: 1.1rem;
     line-height: 1.5;
-    margin-bottom: 10px; /* eller annan storlek beroende på behov */
+    color: rgb(255, 255, 255);
   }
-  button {
-    margin: 10px;
-  }
-  // header {
-  //   height: 100vh;
-  // }
 }
-// main {
-//   height: 100vh;
-//   border: 2px solid green;
-//   position: relative;
-//   padding-bottom: 100vh; /* Lägg till samma höjd som footer elementet */
-// }
-
-// // footer {
-// //   height: 100vh;
-// //   border: 2px solid red;
-// //   margin-bottom: 0;
-// //   position: sticky;
-// //   bottom: 0;
-// // }
+@media (max-width: 995px) {
+  #jonaseriksson {
+    color: rgb(255, 255, 255);
+  }
+  h1 {
+    color: rgb(255, 255, 255);
+  }
+  h2 {
+    color: rgb(255, 255, 255);
+  }
+}

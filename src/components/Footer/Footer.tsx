@@ -12,15 +12,19 @@ const Footer = forwardRef<HTMLDivElement>((props, ref) => {
         </h3>
       </article>
       <article className="logos">
-        <a href="https://www.linkedin.com/in/jonaseriksson90/">
+        <a
+          className="linkhover"
+          href="https://www.linkedin.com/in/jonaseriksson90/"
+        >
           <img src={linkedInIcon} alt="LinkedIn logo" width="50" height="50" />
         </a>
-        <a href="mailto:jonasericsson90@hotmail.com">
+        <a className="linkhover" href="mailto:jonasericsson90@hotmail.com">
           <img src={eMailIcon} alt="Email" width="50" height="50" />
         </a>
         <a href="https://github.com/Adrijun">
           <img
-            id="gitHub"
+            className="linkhover"
+            // id="gitHub"
             src={githubIcon}
             alt="Github logo with black cat"
             width="50"

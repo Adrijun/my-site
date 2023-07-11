@@ -2,9 +2,10 @@
   margin-left: 5%;
   margin-top: 2%;
   font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
 }
-h2 {
-  color: rgb(24, 107, 102);
+#jonaseriksson:hover {
+  color: rgb(255, 255, 255);
 }
 
 .menu-icon-bar {
@@ -13,7 +14,7 @@ h2 {
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-  background-color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .navbar-toggler {
@@ -27,7 +28,7 @@ h2 {
 
 .open {
   margin-right: 5%;
-  background-color: rgb(24, 107, 102);
+  background-color: rgb(24, 210, 110);
 }
 
 .open:nth-child(1) {
@@ -63,24 +64,33 @@ h2 {
 
 .navbar a {
   position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+.navbar a:hover {
+  color: rgb(255, 255, 255);
+}
+.navbar a:active,
+.navbar a:focus {
+  color: rgba(255, 255, 255, 0.7); // Anpassa färgen efter ditt behov
 }
 
-.navbar a:after {
+.navbar a::before {
   content: '';
   position: absolute;
-  width: 75%;
+  bottom: 12px;
+  left: 0;
+  width: 0%;
   height: 2px;
-  bottom: 20%;
-  left: 10%;
-  background-color: #333;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
+  background-color: rgb(24, 210, 110);
+  transition: width 0.3s ease-out;
+  margin-left: 5%;
+  margin-top: 0;
+  border-radius: 10px;
 }
 
-.navbar a:hover:after {
-  visibility: visible;
-  transform: scaleX(1);
+.navbar a:hover::before {
+  width: 50%;
 }
 
 @media only screen and (max-width: 992px) {
