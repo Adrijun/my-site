@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
 import '../../scss/Main.scss';
+import anonymPortfolio from '../../assets/images/anonymPortfoliojpg.jpg';
+import majojo from '../../assets/images/Majojo.jpg';
+import portfolioImage from '../../assets/images/marten-bjork-6dW3xyQvcYE-unsplash.jpg';
+import { Link } from 'react-router-dom';
 
 function Main() {
   const [scrollY, setScrollY] = useState(0);
@@ -17,20 +22,20 @@ function Main() {
     };
   }, []);
 
-  const redValue = Math.max(255 - scrollY, 24);
-  const greenValue = Math.max(255 - scrollY, 107);
-  const blueValue = Math.max(255 - scrollY, 102);
+  const redValue = Math.max(255 - scrollY, 5);
+  const greenValue = Math.max(255 - scrollY, 210);
+  const blueValue = Math.max(255 - scrollY, 110);
   const colorValue = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
 
   return (
-    <div className="bg-white">
-      <div className="full-height d-flex align-items-center justify-content-center">
-        <div className="d-flex flex-column align-items-start">
+    <>
+      <section className="full-height d-flex justify-content-center mt-5">
+        <article className="d-flex flex-column align-items-start">
           <h1
             className="mainWelcome"
             style={{ color: colorValue, fontWeight: 'bolder' }}
           >
-            Hi! <br />
+            Hi, <br />
             I´m Jonas
           </h1>
           <h2
@@ -39,68 +44,72 @@ function Main() {
           >
             Frontend Web Developer
           </h2>
-        </div>
+        </article>
+        <section className="left-box">
+          <article></article>
+        </section>
+        <section className="right-box">
+          <article></article>
+        </section>
+        <div className="transparent-overlay"></div>
+      </section>
 
-        <div className="left-box">
-          <div className="box bg-white shadow rounded p-3"></div>
-        </div>
-
-        <div className="right-box">
-          <div className="box bg-white shadow rounded p-3"></div>
-        </div>
-      </div>
-      <div className="box-wrapper">
-        <Container>
-          <Row>
-            <Col md={6} lg={4}>
-              <div className="box bg-white shadow rounded p-3">
-                <img
-                  src="https://via.placeholder.com/300x200"
-                  alt="Placeholder"
-                  className="img-fluid mb-3"
+      <Container>
+        <Row>
+          <Col md={6} lg={4}>
+            <div className="card-image-wrapper">
+              <Link to="/portfolio#anonymous">
+                <Card.Img
+                  variant="top"
+                  src={anonymPortfolio}
+                  alt="Anonymous project"
+                  className="img-fluid mb-3 custom-img cardImage"
+                  width={300}
+                  style={{ height: '50vh' }}
                 />
-                <h2>Anonymous</h2>
-                <p>
-                  This is my thesis. With coordinates retrieved from an API,
-                  they are drawn on a canvas stage.
-                </p>
-              </div>
-            </Col>
-            <Col md={6} lg={4}>
-              <div className="box bg-white shadow rounded p-3">
-                <img
-                  src="https://via.placeholder.com/300x200"
-                  alt="Placeholder"
-                  className="img-fluid mb-3"
+                <div className="overlay" style={{ height: '50vh' }}>
+                  <h3 className="cardsText">Anonymous</h3>
+                </div>
+              </Link>
+            </div>
+          </Col>
+          <Col md={6} lg={4}>
+            <div className="card-image-wrapper">
+              <Link to="/portfolio#restaurant">
+                <Card.Img
+                  variant="top"
+                  src={majojo}
+                  alt="Anonymous project"
+                  className="img-fluid mb-3 custom-img cardImage"
+                  width={300}
+                  style={{ height: '50vh' }}
                 />
-                <h2>The restaurant</h2>
-                <p>
-                  My first group work in React where we had to make a website
-                  for a restaurant and where it was possible to book a table.{' '}
-                  <br />
-                  Bon Appétit
-                </p>
-              </div>
-            </Col>
-            <Col md={6} lg={4}>
-              <div className="box bg-white shadow rounded p-3">
-                <img
-                  src="https://via.placeholder.com/300x200"
-                  alt="Placeholder"
-                  className="img-fluid mb-3"
+                <div className="overlay" style={{ height: '50vh' }}>
+                  <h3 className="cardsText">The Restaurant</h3>
+                </div>
+              </Link>
+            </div>
+          </Col>
+          <Col md={6} lg={4}>
+            <div className="card-image-wrapper">
+              <Link to="/portfolio#portfolio">
+                <Card.Img
+                  variant="top"
+                  src={portfolioImage}
+                  alt="Anonymous project"
+                  className="img-fluid mb-3 custom-img cardImage"
+                  width={300}
+                  style={{ height: '50vh' }}
                 />
-                <h2>Box Heading</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  at nisi ac eros dignissim tincidunt id a eros. Donec
-                  ullamcorper n nunc enim, et efficitur velit imperdiet id.
-                </p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    </div>
+                <div className="overlay" style={{ height: '50vh' }}>
+                  <h3 className="cardsText">My Portfolio</h3>
+                </div>
+              </Link>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 

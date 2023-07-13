@@ -1,20 +1,20 @@
 #jonaseriksson {
   margin-left: 5%;
   margin-top: 2%;
-  font-family: bolder;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
 }
-h2 {
-  color: rgb(24, 107, 102);
+#jonaseriksson:hover {
+  color: rgb(255, 255, 255);
 }
 
 .menu-icon-bar {
   display: block;
-  width: 50px;
+  width: 30px;
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-  background-color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .navbar-toggler {
@@ -28,7 +28,7 @@ h2 {
 
 .open {
   margin-right: 5%;
-  background-color: rgb(24, 107, 102);
+  background-color: rgb(24, 210, 110);
 }
 
 .open:nth-child(1) {
@@ -51,6 +51,7 @@ h2 {
 }
 
 .navbar-nav {
+  margin: 10px;
   margin-right: 5%;
   display: flex;
   flex-direction: column;
@@ -63,24 +64,33 @@ h2 {
 
 .navbar a {
   position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+.navbar a:hover {
+  color: rgb(255, 255, 255);
+}
+.navbar a:active,
+.navbar a:focus {
+  color: rgba(255, 255, 255, 0.7); // Anpassa färgen efter ditt behov
 }
 
-.navbar a:after {
+.navbar a::before {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 20%;
+  bottom: 12px;
   left: 0;
-  background-color: #333;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(24, 210, 110);
+  transition: width 0.3s ease-out;
+  margin-left: 5%;
+  margin-top: 0;
+  border-radius: 10px;
 }
 
-.navbar a:hover:after {
-  visibility: visible;
-  transform: scaleX(1);
+.navbar a:hover::before {
+  width: 50%;
 }
 
 @media only screen and (max-width: 992px) {
@@ -94,5 +104,10 @@ h2 {
   .navbar a:hover:after {
     visibility: hidden;
     transform: scaleX(0);
+  }
+  .navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
   }
 }

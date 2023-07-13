@@ -1,42 +1,45 @@
 .full-height {
   height: 100vh;
-  background-color: #ffffff;
-  color: #000000;
 
   h1 {
-    margin-top: 5%;
     z-index: 1;
     font-size: 4em;
-    color: black;
-    font-family: 'Montserrat', sans-serif;
   }
   .mainWelcome {
-    margin-top: 5%;
     z-index: 1;
     font-size: 10em;
-    color: black;
-    font-family: 'Montserrat', sans-serif;
   }
   .mainWelcome2 {
     margin-top: -2%;
     z-index: 1;
     font-size: 2em;
-    color: black;
-    font-family: 'Montserrat', sans-serif;
   }
 }
-
+// Animation for the circles
+// .left-box,
+// .right-box {
+//   position: absolute;
+//   top: 25%;
+//   width: 50vh;
+//   height: 50vh;
+//   animation-duration: 3s;
+//   animation-timing-function: ease-in-out;
+//   animation-iteration-count: infinite;
+//   clip-path: polygon() (50% at 50% 50%);
+//   border-radius: 50%;
+// }
 .left-box,
 .right-box {
   position: absolute;
   top: 25%;
-  width: 50vh;
-  height: 50vh;
+  width: 25vh;
+  height: 25vh;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  clip-path: circle(50% at 50% 50%);
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 
 .left-box {
@@ -47,25 +50,21 @@
   animation: right-box-animation 1s forwards, right-box-fadeout 1s forwards 2.5s;
 }
 
-.box {
-  height: 100%;
-}
-
 @keyframes left-box-animation {
   from {
     transform: translateX(-500px) rotate(0deg);
   }
   to {
-    transform: translateX(0) rotate(360deg);
+    transform: translateX(0) rotate(270deg);
   }
 }
 
 @keyframes right-box-animation {
   from {
-    transform: translateX(200px) rotate(0deg);
+    transform: translateX(500px) rotate(0deg);
   }
   to {
-    transform: translateX(0) rotate(-360deg);
+    transform: translateX(0) rotate(-270deg);
   }
 }
 
@@ -96,58 +95,75 @@
   height: 100%;
   background-image: radial-gradient(
     closest-side at 60% 55%,
-    rgb(27, 29, 32),
-    rgb(28, 41, 45),
-    rgb(24, 107, 102)
+    rgb(24, 210, 110),
+    rgb(0, 225, 110),
+    rgb(24, 210, 110)
   );
 }
 
 .left-box::before {
   right: 0;
-  border-radius: 50%;
 }
 
 .right-box::after {
   left: 0;
-  border-radius: 50%;
-  border-bottom-left-radius: 50%;
+}
+// Overlay on image card
+.card-image-wrapper {
+  position: relative;
 }
 
-.box-wrapper {
-  height: 100vh;
-  padding: 50px;
-  margin-top: 10%;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1.05);
+}
+.card-image {
+  transition: all 0.1s ease-in-out;
+}
+
+.card-image-wrapper:hover .overlay {
+  opacity: 1;
+  transition: all 0.1s ease-in-out;
+}
+
+.card-image-wrapper:hover .card-img-top {
+  transform: scale(1.01);
+}
+
+.cardsText {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
   .full-height {
     height: auto;
-    min-height: 100vh;
+    min-height: 80vh;
+    h1.mainWelcome {
+      font-size: 6em;
+      margin: 5%;
+    }
+    .mainWelcome2 {
+      margin-left: 5%;
+      margin-top: -1;
+    }
   }
   .left-box,
   .right-box {
     top: 10%;
     width: 30vh;
     height: 30vh;
-  }
-  .mainWelcome {
-    margin-top: 10%;
-    font-size: 2em;
-  }
-  .mainWelcome2 {
-    margin-top: -1;
-  }
-  @media (max-width: 768px) {
-    .full-height {
-      h1.mainWelcome {
-        margin-top: 20%;
-        font-size: 6em;
-      }
-    }
-    .box-wrapper {
-      height: 100vh;
-      padding: 50px;
-      margin-top: 30%;
-    }
   }
 }
