@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../../scss/Main.scss';
 import anonymPortfolio from '../../assets/images/anonymPortfoliojpg.jpg';
@@ -23,14 +22,14 @@ function Main() {
     };
   }, []);
 
-  const redValue = Math.max(255 - scrollY, 20);
+  const redValue = Math.max(255 - scrollY, 5);
   const greenValue = Math.max(255 - scrollY, 210);
   const blueValue = Math.max(255 - scrollY, 110);
   const colorValue = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
 
   return (
-    <main className="">
-      <section className="full-height d-flex align-items-center justify-content-center">
+    <>
+      <section className="full-height d-flex justify-content-center mt-5">
         <article className="d-flex flex-column align-items-start">
           <h1
             className="mainWelcome"
@@ -52,67 +51,65 @@ function Main() {
         <section className="right-box">
           <article></article>
         </section>
-        <div className="transparent-overlay"></div> {/* Lägg till detta */}
+        <div className="transparent-overlay"></div>
       </section>
 
-      <section className="box-wrapper">
-        <Container>
-          <Row>
-            <Col md={6} lg={4}>
-              <div className="card-image-wrapper">
-                <Link to="/portfolio#anonymous">
-                  <Card.Img
-                    variant="top"
-                    src={anonymPortfolio}
-                    alt="Anonymous project"
-                    className="img-fluid mb-3 custom-img cardImage"
-                    width={300}
-                    style={{ height: '50vh' }}
-                  />
-                  <div className="overlay" style={{ height: '50vh' }}>
-                    <h3 className="cardsText">Anonymous</h3>
-                  </div>
-                </Link>
-              </div>
-            </Col>
-            <Col md={6} lg={4}>
-              <div className="card-image-wrapper">
-                <Link to="/portfolio#restaurant">
-                  <Card.Img
-                    variant="top"
-                    src={majojo}
-                    alt="Anonymous project"
-                    className="img-fluid mb-3 custom-img cardImage"
-                    width={300}
-                    style={{ height: '50vh' }}
-                  />
-                  <div className="overlay" style={{ height: '50vh' }}>
-                    <h3 className="cardsText">The Restaurant</h3>
-                  </div>
-                </Link>
-              </div>
-            </Col>
-            <Col md={6} lg={4}>
-              <div className="card-image-wrapper">
-                <Link to="/portfolio#portfolio">
-                  <Card.Img
-                    variant="top"
-                    src={portfolioImage}
-                    alt="Anonymous project"
-                    className="img-fluid mb-3 custom-img cardImage"
-                    width={300}
-                    style={{ height: '50vh' }}
-                  />
-                  <div className="overlay" style={{ height: '50vh' }}>
-                    <h3 className="cardsText">My Portfolio</h3>
-                  </div>
-                </Link>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-    </main>
+      <Container>
+        <Row>
+          <Col md={6} lg={4}>
+            <div className="card-image-wrapper">
+              <Link to="/portfolio#anonymous">
+                <Card.Img
+                  variant="top"
+                  src={anonymPortfolio}
+                  alt="Anonymous project"
+                  className="img-fluid mb-3 custom-img cardImage"
+                  width={300}
+                  style={{ height: '50vh' }}
+                />
+                <div className="overlay" style={{ height: '50vh' }}>
+                  <h3 className="cardsText">Anonymous</h3>
+                </div>
+              </Link>
+            </div>
+          </Col>
+          <Col md={6} lg={4}>
+            <div className="card-image-wrapper">
+              <Link to="/portfolio#restaurant">
+                <Card.Img
+                  variant="top"
+                  src={majojo}
+                  alt="Anonymous project"
+                  className="img-fluid mb-3 custom-img cardImage"
+                  width={300}
+                  style={{ height: '50vh' }}
+                />
+                <div className="overlay" style={{ height: '50vh' }}>
+                  <h3 className="cardsText">The Restaurant</h3>
+                </div>
+              </Link>
+            </div>
+          </Col>
+          <Col md={6} lg={4}>
+            <div className="card-image-wrapper">
+              <Link to="/portfolio#portfolio">
+                <Card.Img
+                  variant="top"
+                  src={portfolioImage}
+                  alt="Anonymous project"
+                  className="img-fluid mb-3 custom-img cardImage"
+                  width={300}
+                  style={{ height: '50vh' }}
+                />
+                <div className="overlay" style={{ height: '50vh' }}>
+                  <h3 className="cardsText">My Portfolio</h3>
+                </div>
+              </Link>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 

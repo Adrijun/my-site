@@ -1,67 +1,22 @@
-.projects-header-one {
-  color: rgb(255, 255, 255);
-  font-weight: bolder;
+.project-wrapper {
+  background-color: rgba(0, 0, 0, 0.8);
 }
-.projectsArticle {
-  background-color: rgba(0, 0, 0, 0.9);
-  color: rgb(255, 255, 255);
-  height: 70vh;
-}
-.projectsContent {
-  height: 60vh;
-  font-size: 1.2rem;
+.image-portfolios {
+  height: 100%;
 }
 .image-portfolio {
-  margin-right: 2%;
+  height: 50vh;
 }
-
-@media (max-width: 768px) {
-  .projects-header-one {
-    padding-top: 30%;
-    font-size: 2rem;
+// .img-fluid {
+//   max-width: 100%;
+//   height: 50vh;
+// }
+@media (max-width: 992px) {
+  .anonymous-portfolio {
+    margin-top: 30%;
   }
-
-  .box {
-    margin-top: 15%;
-    height: 100%;
-  }
-
-  .image-portfolio {
-    width: 100%;
-    height: 40vh;
-  }
-
-  .box-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .projectsContent {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .button-group {
-    margin-top: auto;
-  }
-}
-@media (min-width: 768px) {
-  .box-wrapper {
-    margin-top: 10%;
-  }
-  .projects-header-one {
-    font-size: 3rem;
-    // padding-top: 15%;
-  }
-  // .image-portfolio {
-  //   width: 45%;
-  //   height: 60vh;
-  //   // float: left;
+  // .img-fluid {
+  //   max-width: 100%;
+  //   height: 50vh;
   // }
-
-  .BtnLink {
-    margin-bottom: 0;
-  }
 }
