@@ -5,10 +5,10 @@ import portfolioImage from '../../../assets/images/marten-bjork-6dW3xyQvcYE-unsp
 export default function Portfolio() {
   const projectRef = useRef(null);
   return (
-    <Container className="box shadow rounded p-2 mb-1">
+    <Container className="box shadow rounded p-2 mb-1 project-wrapper">
       <h2>My Portfolio</h2>
       <Row lg={2}>
-        <Col md={6} lg={6}>
+        <Col md={6} lg={4}>
           <div className="image-portfolios">
             <img
               src={portfolioImage}
@@ -17,7 +17,7 @@ export default function Portfolio() {
             />
           </div>
         </Col>
-        <Col md={6} lg={6}>
+        <Col md={6} lg={8}>
           <div className="projectsContent">
             <p>
               This is my portfolio I will continuously post new projects in my
