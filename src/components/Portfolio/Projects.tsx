@@ -7,19 +7,19 @@ import Portfolio from './Projects/Portfolio';
 function Projects() {
   return (
     <>
-      <Container className="mt-5">
+      <Container className="mt-2">
         <Row>
           <Col
             md={12}
             lg={12}
-            className="mb-3 project-wrapper anonymous-portfolio d-flex align-items-center"
+            className="mb-3  anonymous-portfolio d-flex align-items-center"
           >
             <Anonymous />
           </Col>
-          <Col md={12} lg={12} className="mb-3 project-wrapper ">
+          <Col md={12} lg={12} className="mb-3">
             <Restaurant />
           </Col>
-          <Col md={12} lg={12} className="mb-3 project-wrapper">
+          <Col md={12} lg={12} className="mb-3">
             <Portfolio />
           </Col>
         </Row>

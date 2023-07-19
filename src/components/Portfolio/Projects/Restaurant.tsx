@@ -5,10 +5,10 @@ import majojo from '../../../assets/images/Majojo.jpg';
 export default function Restaurant() {
   const projectRef = useRef(null);
   return (
-    <Container className="box shadow rounded p-2 mb-1">
+    <Container className="box shadow rounded p-2 mb-1 project-wrapper">
       <h2>The restaurant</h2>
       <Row lg={2}>
-        <Col md={6} lg={6}>
+        <Col md={6} lg={4}>
           <div className="image-portfolios">
             <img
               src={majojo}
@@ -17,7 +17,7 @@ export default function Restaurant() {
             />
           </div>
         </Col>
-        <Col md={6} lg={6}>
+        <Col md={6} lg={8}>
           <div className="projectsContent">
             <p>
               This is my first group project in school where we created a

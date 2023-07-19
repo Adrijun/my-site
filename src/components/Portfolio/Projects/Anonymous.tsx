@@ -5,10 +5,10 @@ import anonymPortfolio from '../../../assets/images/anonymPortfoliojpg2.jpg';
 function Anonymous() {
   const projectRef = useRef(null);
   return (
-    <Container className="box shadow rounded p-2 mb-1">
+    <Container className="box shadow rounded p-2 mb-1 project-wrapper">
       <h2>Anonymous</h2>
-      <Row lg={2}>
-        <Col md={6} lg={6}>
+      <Row>
+        <Col md={6} lg={4}>
           <div className="image-portfolios">
             <img
               src={anonymPortfolio}
@@ -17,7 +17,7 @@ function Anonymous() {
             />
           </div>
         </Col>
-        <Col md={6} lg={6}>
+        <Col md={6} lg={8}>
           <div className="projectsContent">
             <p>
               The goal of this project was to develop a function that retrieves
