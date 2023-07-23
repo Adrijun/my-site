@@ -72,7 +72,7 @@
 }
 .navbar a:active,
 .navbar a:focus {
-  color: rgba(255, 255, 255, 0.7); // Anpassa färgen efter ditt behov
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .navbar a::before {
@@ -109,5 +109,8 @@
     text-decoration: none;
     outline: 0;
     box-shadow: none;
+  }
+  #responsive-navbar-nav {
+    background-color: rgba(0, 0, 0, 0.9);
   }
 }
