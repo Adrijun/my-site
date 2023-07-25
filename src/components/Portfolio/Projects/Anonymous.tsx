@@ -1,22 +1,23 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import anonymPortfolio from '../../../assets/images/anonymPortfoliojpg.jpg';
+import anonymPortfolio from '../../../assets/images/anonymPortfoliojpg2.jpg';
 
 function Anonymous() {
+  const projectRef = useRef(null);
   return (
-    // <article className="box shadow rounded p-2 mb-1 projectsArticle">
-    //   <div className="box-content">
-    <Container>
+    <Container className="box shadow rounded p-2 mb-1 project-wrapper">
       <h2>Anonymous</h2>
-      <Row lg={2}>
-        <Col md={6} lg={6}>
-          <img
-            src={anonymPortfolio}
-            alt="Placeholder"
-            className="img-fluid mb-3 image-portfolio"
-          />
+      <Row>
+        <Col md={6} lg={4}>
+          <div className="image-portfolios">
+            <img
+              src={anonymPortfolio}
+              alt="Placeholder"
+              className="img-fluid mb-3 image-portfolio"
+            />
+          </div>
         </Col>
-        <Col md={6} lg={6}>
+        <Col md={6} lg={8}>
           <div className="projectsContent">
             <p>
               The goal of this project was to develop a function that retrieves
@@ -50,8 +51,6 @@ function Anonymous() {
         </Col>
       </Row>
     </Container>
-    //   </div>
-    // </article>
   );
 }
 
