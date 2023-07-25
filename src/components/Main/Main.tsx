@@ -9,7 +9,8 @@ import { Link } from 'react-router-dom';
 
 function Main() {
   const [scrollY, setScrollY] = useState(0);
-
+  const [isMobile, setIsMobile] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -19,6 +20,20 @@ function Main() {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 991);
+      setIsDesktop(window.innerWidth >= 992);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -68,7 +83,12 @@ function Main() {
                   style={{ height: '50vh' }}
                 />
                 <div className="overlay" style={{ height: '50vh' }}>
-                  <h3 className="cardsText">Anonymous</h3>
+                  {isDesktop && <h3 className="cardsText">Anonymous</h3>}
+                  {isMobile && (
+                    <div className="overlay" style={{ height: '50vh' }}>
+                      <h3 className="cardsText">Read more</h3>{' '}
+                    </div>
+                  )}
                 </div>
               </Link>
             </div>
@@ -85,7 +105,12 @@ function Main() {
                   style={{ height: '50vh' }}
                 />
                 <div className="overlay" style={{ height: '50vh' }}>
-                  <h3 className="cardsText">The Restaurant</h3>
+                  {isDesktop && <h3 className="cardsText">The Restaurant</h3>}
+                  {isMobile && (
+                    <div className="overlay" style={{ height: '50vh' }}>
+                      <h3 className="cardsText">Read more</h3>{' '}
+                    </div>
+                  )}
                 </div>
               </Link>
             </div>
@@ -102,7 +127,12 @@ function Main() {
                   style={{ height: '50vh' }}
                 />
                 <div className="overlay" style={{ height: '50vh' }}>
-                  <h3 className="cardsText">My Portfolio</h3>
+                  {isDesktop && <h3 className="cardsText">My Portfolio</h3>}
+                  {isMobile && (
+                    <div className="overlay" style={{ height: '50vh' }}>
+                      <h3 className="cardsText">Read more</h3>{' '}
+                    </div>
+                  )}
                 </div>
               </Link>
             </div>
