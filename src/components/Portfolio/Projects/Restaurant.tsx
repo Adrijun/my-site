@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
-import { Button, Col, Row, Container } from 'react-bootstrap';
+import { Col, Row, Container } from 'react-bootstrap';
 import majojo from '../../../assets/images/Majojo.jpg';
-
+import OpenInNewWindow from '../../../utils/utils';
 export default function Restaurant() {
   const projectRef = useRef(null);
+
   return (
     <Container className="box shadow rounded p-2 mb-1 project-wrapper">
       <h2>The restaurant</h2>
@@ -27,20 +28,14 @@ export default function Restaurant() {
               ensuring a seamless user experience and visually appealing design.
             </p>
             <div className="button-group">
-              <Button
-                className="BtnLink mt-3"
-                href="https://anonymous-pi.vercel.app/"
-                variant="outline-light m-1"
-              >
-                Visit Website
-              </Button>
-              <Button
-                className="BtnLink mt-3"
-                href="https://github.com/Adrijun/React-Konva"
-                variant="outline-light m-1"
-              >
-                Github Repo
-              </Button>
+              <OpenInNewWindow
+                link="https://idyllic-cucurucho-f4089c.netlify.app/"
+                buttonText="Visit Website"
+              />
+              <OpenInNewWindow
+                link="https://github.com/Joelhagg/Restaurangen"
+                buttonText="Github Repo"
+              />
             </div>
           </div>
         </Col>
