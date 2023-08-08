@@ -24,7 +24,6 @@ const Footer = forwardRef<HTMLDivElement>((props, ref) => {
         <a href="https://github.com/Adrijun">
           <img
             className="linkhover"
-            // id="gitHub"
             src={githubIcon}
             alt="Github logo with black cat"
             width="50"

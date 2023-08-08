@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import portfolioImage from '../../../assets/images/marten-bjork-6dW3xyQvcYE-unsplash.jpg';
-
+import OpenInNewWindow from '../../../utils/utils';
 export default function Portfolio() {
   const projectRef = useRef(null);
+
   return (
     <Container className="box shadow rounded p-2 mb-1 project-wrapper">
       <h2>My Portfolio</h2>
@@ -30,13 +31,10 @@ export default function Portfolio() {
               my weaknesses.
             </p>
             <div className="button-group">
-              <Button
-                className="BtnLink mt-3"
-                href="https://github.com/Adrijun/React-Konva"
-                variant="outline-light m-1"
-              >
-                Github Repo
-              </Button>
+              <OpenInNewWindow
+                link="https://github.com/Adrijun/my-site"
+                buttonText="Github Repo"
+              />
             </div>
           </div>
         </Col>

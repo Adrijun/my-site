@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import anonymPortfolio from '../../../assets/images/anonymPortfoliojpg2.jpg';
-
+import OpenInNewWindow from '../../../utils/utils';
 function Anonymous() {
   const projectRef = useRef(null);
   return (
@@ -32,20 +32,14 @@ function Anonymous() {
               TypeScript, and React-Konva.
             </p>
             <div className="button-group">
-              <Button
-                className="BtnLink mt-3"
-                href="https://anonymous-pi.vercel.app/"
-                variant="outline-light m-1"
-              >
-                Visit Website
-              </Button>
-              <Button
-                className="BtnLink mt-3"
-                href="https://github.com/Adrijun/React-Konva"
-                variant="outline-light m-1"
-              >
-                Github Repo
-              </Button>
+              <OpenInNewWindow
+                link="https://anonymous-pi.vercel.app/"
+                buttonText="Visit Website"
+              />
+              <OpenInNewWindow
+                link="https://github.com/Adrijun/React-Konva"
+                buttonText="Github Repo"
+              />
             </div>
           </div>
         </Col>
