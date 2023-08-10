@@ -2,7 +2,15 @@ import React from 'react';
 import { Container, Row, Col, Image, Button } from 'react-bootstrap';
 import profileImage from '../../assets/images/profil1.bw1.jpg';
 import downLoadIcon from '../../assets/icons/download.svg';
+import { useState } from 'react';
+import { Document, Page } from 'react-pdf';
+// import CV from '../../../public/CV.pdf';
 function About() {
+  const [numPages, setNumPages] = useState<number>();
+  const [pageNumber, setPageNumber] = useState<number>(1);
+  function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
+    setNumPages(numPages);
+  }
   return (
     <>
       <Container className="mt-2 mb-3">
@@ -30,7 +38,10 @@ function About() {
                     </p>
                     <div className="button-group">
                       <a
-                        href="/assets/documents/CV.pdf"
+                        href="/public/CV.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        type="application/pdf"
                         download="CV.pdf"
                         className="btn btn-outline-light m-1 mt-3"
                       >
@@ -41,8 +52,8 @@ function About() {
                         CV (Swe)
                       </a>
                       <a
-                        href="/assets/documents/CV.pdf"
-                        download="CV.pdf"
+                        href="/assets/documents/CV(eng).pdf"
+                        download="CV(eng).pdf"
                         className="btn btn-outline-light m-1 mt-3"
                       >
                         <Image
@@ -53,6 +64,17 @@ function About() {
                       </a>
                     </div>
                   </div>
+                  {/* <div>
+                    <Document
+                      file="CV.pdf"
+                      onLoadSuccess={onDocumentLoadSuccess}
+                    >
+                      <Page pageNumber={pageNumber} />
+                    </Document>
+                    <p>
+                      Page {pageNumber} of {numPages}
+                    </p>
+                  </div> */}
                 </Col>
               </Row>
             </Container>
