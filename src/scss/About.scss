@@ -1,3 +1,28 @@
 .project-wrapper {
   background-color: rgba(0, 0, 0, 0.8);
 }
+.work {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  h3 {
+    font-style: italic;
+    font-size: 1.3rem;
+  }
+}
+h3 {
+  color: rgb(255, 255, 255);
+}
+.iconHover {
+  line-height: 1;
+  margin-right: 8px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: ease-in-out 0.3s;
+  padding: 10px;
+}
+// .linkhover:hover {
+//   background: rgb(24, 210, 110);
+//   color: #fff;
+// }
