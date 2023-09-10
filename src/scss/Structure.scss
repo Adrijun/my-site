@@ -3,9 +3,8 @@ body {
   font-family: 'Helvetica', sans-serif;
   background-image: url('../assets/images/sep09.jpg');
   height: 100%;
-  // background-position: fixed;
-  // background-repeat: no-repeat;
-  // background-size: cover;
+  overflow-x: hidden;
+
   p {
     font-size: 1.1rem;
     line-height: 1.6;

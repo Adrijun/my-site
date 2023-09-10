@@ -11,7 +11,6 @@ function About() {
         <Row>
           <Col md={12} lg={12} className="anonymous-portfolio ">
             <Container className="box shadow rounded p-2 mb-1 project-wrapper ">
-              <h2>About me</h2>
               <Row>
                 <Col md={6} lg={4}>
                   <div className="image-portfolios">
@@ -24,11 +23,12 @@ function About() {
                 </Col>
                 <Col md={6} lg={8} className="">
                   <article>
+                    <h2>About me</h2>
                     <p>
-                      My name is Jonas and I live in Stockholm, Sweden with my
-                      family. Although I am new to Front-end, I have a passion
-                      for development and like the small details, both design
-                      and semantically written code is something I value highly.
+                      My name is Jonas, and I live with my family in Stockholm.
+                      I am an enthusiastic Front-end developer with a passion
+                      for development and an eye for small details. I value both
+                      design and semantically written code highly.
                     </p>
                   </article>
                   <article>
