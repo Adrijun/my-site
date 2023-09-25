@@ -1,9 +1,9 @@
 body {
   margin: auto;
   font-family: 'Helvetica', sans-serif;
-  background-image: url('../assets/images/sep09.jpg');
   height: 100%;
   overflow-x: hidden;
+  background-color: rgb(0, 0, 0);
 
   p {
     font-size: 1.1rem;
@@ -12,9 +12,9 @@ body {
   }
 }
 
-#jonaseriksson {
-  color: rgb(255, 255, 255);
-}
+// #jonaseriksson {
+//   color: rgb(255, 255, 255);
+// }
 h1 {
   color: rgb(255, 255, 255);
 }

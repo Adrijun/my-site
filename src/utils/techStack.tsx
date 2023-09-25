@@ -16,7 +16,7 @@ import WebAccessiblity from '../assets/icons/icons8-web-accessibility-50.png';
 import { Col } from 'react-bootstrap';
 function TechStack() {
   return (
-    <Col md={8} lg={6} className=" offset-md-6 offset-lg-4 ">
+    <Col md={6} lg={6} className=" offset-md-6 offset-lg-4 ">
       <article>
         <h2>Skills</h2>
         <img

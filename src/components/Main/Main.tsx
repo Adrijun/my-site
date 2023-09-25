@@ -6,22 +6,11 @@ import anonymPortfolio from '../../assets/images/anonymPortfoliojpg.jpg';
 import majojo from '../../assets/images/Majojo.jpg';
 import portfolioImage from '../../assets/images/marten-bjork-6dW3xyQvcYE-unsplash.jpg';
 import { Link } from 'react-router-dom';
-
+import Video from '../../assets/videos/production_id_3978416 (1080p).mp4';
 function Main() {
-  const [scrollY, setScrollY] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
 
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 991);
@@ -37,37 +26,24 @@ function Main() {
     };
   }, []);
 
-  const redValue = Math.max(255 - scrollY, 5);
-  const greenValue = Math.max(255 - scrollY, 210);
-  const blueValue = Math.max(255 - scrollY, 110);
-  const colorValue = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
-
   return (
     <>
-      <section className="full-height d-flex justify-content-center mt-5">
-        <article className="d-flex flex-column align-items-start">
-          <h1
-            className="mainWelcome"
-            style={{ color: colorValue, fontWeight: 'bolder' }}
-          >
-            Hi, <br />
-            I´m Jonas
-          </h1>
-          <h2
-            className="mainWelcome2"
-            style={{ color: colorValue, fontWeight: 'bold' }}
-          >
-            Frontend Web Developer
-          </h2>
-        </article>
-        <section className="left-box">
-          <article></article>
-        </section>
-        <section className="right-box">
-          <article></article>
-        </section>
-        <div className="transparent-overlay"></div>
-      </section>
+      <Row>
+        <Col md={12} lg={12}>
+          <section className="full-height d-flex justify-content-center align-items-center mt-5">
+            <article className="showcase">
+              <video src={Video} loop muted autoPlay typeof="video/mp4"></video>
+              <article className="title d-flex flex-column align-items-center">
+                <h1>
+                  Hi, <br />
+                  I´m Jonas
+                </h1>
+                <p>Frontend Web Developer</p>
+              </article>
+            </article>
+          </section>
+        </Col>
+      </Row>
 
       <Container>
         <Row>
