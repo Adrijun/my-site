@@ -32,7 +32,14 @@ function Main() {
         <Col md={12} lg={12}>
           <section className="full-height d-flex justify-content-center align-items-center mt-5">
             <article className="showcase">
-              <video src={Video} loop muted autoPlay typeof="video/mp4"></video>
+              <video
+                src={Video}
+                loop
+                muted
+                autoPlay
+                playsInline
+                typeof="video/mp4"
+              ></video>
               <article className="title d-flex flex-column align-items-center">
                 <h1>
                   Hi, <br />
