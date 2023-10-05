@@ -6,7 +6,7 @@ import anonymPortfolio from '../../assets/images/anonymPortfoliojpg.jpg';
 import majojo from '../../assets/images/Majojo.jpg';
 import portfolioImage from '../../assets/images/marten-bjork-6dW3xyQvcYE-unsplash.jpg';
 import { Link } from 'react-router-dom';
-import Video from '../../assets/videos/production_id_3978416 (1080p).mp4';
+import Video from '../../assets/videos/production_id_3978416(1080p).mp4';
 function Main() {
   const [isMobile, setIsMobile] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
@@ -33,7 +33,7 @@ function Main() {
           <section className="full-height d-flex justify-content-center align-items-center mt-5">
             <article className="showcase">
               <video
-                src={'../../assets/videos/production_id_3978416 (1080p).mp4'}
+                src={Video}
                 loop
                 muted
                 autoPlay
