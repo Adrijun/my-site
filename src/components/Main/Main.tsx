@@ -33,7 +33,7 @@ function Main() {
           <section className="full-height d-flex justify-content-center align-items-center mt-5">
             <article className="showcase">
               <video
-                src={Video}
+                src={'../../assets/videos/production_id_3978416 (1080p).mp4'}
                 loop
                 muted
                 autoPlay
