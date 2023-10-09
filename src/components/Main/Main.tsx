@@ -45,7 +45,7 @@ function Main() {
                   Hi, <br />
                   I´m Jonas
                 </h1>
-                <p>Frontend Web Developer</p>
+                <p>Frontend Developer</p>
               </article>
             </article>
           </section>
