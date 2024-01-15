@@ -25,7 +25,7 @@ const SpinningSentence: React.FC = () => {
 
   return (
     <Container className="spinnerContainer">
-      <Row>
+      <Row className="centered">
         <Col xs={12} lg={8} className="spinnerText ">
           <p>Let's create something </p>
           <p className="slidingVertical">

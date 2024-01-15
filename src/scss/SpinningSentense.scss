@@ -7,6 +7,7 @@
   font-weight: bolder;
   overflow: hidden;
   width: 100%;
+  font-weight: bold;
 }
 .spinnerText {
   display: flex;
@@ -19,6 +20,7 @@
   display: inline;
   text-indent: 8px;
   position: relative;
+  width: 60px;
 }
 
 .slidingVertical p {
@@ -40,11 +42,11 @@
   }
   10% {
     opacity: 1;
-    transform: translateY(-12px);
+    transform: translateY(-15px);
   }
   20% {
     opacity: 1;
-    transform: translateY(-12px);
+    transform: translateY(-15px);
   }
   25% {
     opacity: 0;
@@ -58,7 +60,4 @@
     opacity: 0;
     transform: translateY(50px);
   }
-}
-
-@media screen {
 }
