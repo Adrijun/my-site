@@ -55,8 +55,8 @@ function Main() {
       <Container>
         <Row>
           <Col md={6} lg={4}>
-            <div className="card-image-wrapper">
-              <Link to="/portfolio#anonymous">
+            <Link to="/portfolio#anonymous">
+              <div className="card-image-wrapper">
                 <Card.Img
                   variant="top"
                   src={anonymPortfolio}
@@ -73,8 +73,8 @@ function Main() {
                     </div>
                   )}
                 </div>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </Col>
           <Col md={6} lg={4}>
             <div className="card-image-wrapper">
@@ -82,7 +82,7 @@ function Main() {
                 <Card.Img
                   variant="top"
                   src={majojo}
-                  alt="Anonymous project"
+                  alt="Restaurant project"
                   className="img-fluid mb-3 custom-img cardImage"
                   width={300}
                   style={{ height: '50vh' }}
@@ -104,7 +104,7 @@ function Main() {
                 <Card.Img
                   variant="top"
                   src={portfolioImage}
-                  alt="Anonymous project"
+                  alt="portfolio project"
                   className="img-fluid mb-3 custom-img cardImage"
                   width={300}
                   style={{ height: '50vh' }}

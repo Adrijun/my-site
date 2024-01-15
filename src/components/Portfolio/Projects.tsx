@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import '../../scss/Projects.scss';
 import Anonymous from './Projects/Anonymous';
 import Restaurant from './Projects/Restaurant';
@@ -7,7 +7,7 @@ import Portfolio from './Projects/Portfolio';
 function Projects() {
   return (
     <>
-      <Container className="mt-2">
+      <Container className="mt-2 main-projects">
         <Row>
           <Col
             md={12}

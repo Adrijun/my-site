@@ -1,10 +1,8 @@
-import React, { useRef } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import portfolioImage from '../../../assets/images/marten-bjork-6dW3xyQvcYE-unsplash.jpg';
 import OpenInNewWindow from '../../../utils/utils';
 export default function Portfolio() {
-  const projectRef = useRef(null);
-
   return (
     <Container className="box shadow rounded p-2 mb-1 project-wrapper">
       <h2>My Portfolio</h2>
@@ -19,7 +17,7 @@ export default function Portfolio() {
           </div>
         </Col>
         <Col md={6} lg={8}>
-          <div className="projectsContent">
+          <article className="projectsContent">
             <p>
               This is my portfolio I will continuously post new projects in my
               portfolio so that visitors can always see what I have been working
@@ -36,7 +34,7 @@ export default function Portfolio() {
                 buttonText="Github Repo"
               />
             </div>
-          </div>
+          </article>
         </Col>
       </Row>
     </Container>

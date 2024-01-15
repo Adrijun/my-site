@@ -1,11 +1,14 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import '../../scss/Footer.scss';
 import eMailIcon from '../../assets/icons/mail(1).svg';
 import githubIcon from '../../assets/icons/github(1).svg';
 import linkedInIcon from '../../assets/icons/linkedin.svg';
-const Footer = forwardRef<HTMLDivElement>((props, ref) => {
+import SpinningSentense from './SpinningSentense';
+
+const Footer = () => {
   return (
-    <footer className="footerContainer" ref={ref}>
+    <footer className="footerContainer">
+      <SpinningSentense />
       <article>
         <h3 className="footer-header">
           Connect <br /> with me.
@@ -33,6 +36,6 @@ const Footer = forwardRef<HTMLDivElement>((props, ref) => {
       </article>
     </footer>
   );
-});
+};
 
 export default Footer;
