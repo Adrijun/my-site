@@ -1,12 +1,11 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import anonymPortfolio from '../../../assets/images/anonymPortfoliojpg2.jpg';
 import OpenInNewWindow from '../../../utils/utils';
 function Anonymous() {
-  const projectRef = useRef(null);
   return (
     <Container className="box shadow rounded p-2 mb-1 project-wrapper">
-      <h2>Anonymous</h2>
+      <h2 id="anonymous">Anonymous</h2>
       <Row>
         <Col md={6} lg={4}>
           <div className="image-portfolios">
@@ -18,7 +17,7 @@ function Anonymous() {
           </div>
         </Col>
         <Col md={6} lg={8}>
-          <div className="projectsContent">
+          <article className="projectsContent">
             <p>
               The goal of this project was to develop a function that retrieves
               data with coordinates of individuals, boundaries, and danger
@@ -41,7 +40,7 @@ function Anonymous() {
                 buttonText="Github Repo"
               />
             </div>
-          </div>
+          </article>
         </Col>
       </Row>
     </Container>

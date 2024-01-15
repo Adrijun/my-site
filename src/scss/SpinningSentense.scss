@@ -1,0 +1,64 @@
+.spinnerContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  font-weight: bolder;
+  overflow: hidden;
+  width: 100%;
+}
+.spinnerText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.slidingVertical {
+  display: inline;
+  text-indent: 8px;
+  position: relative;
+}
+
+.slidingVertical p {
+  animation: topToBottom 12.5s linear infinite 0s;
+  color: #18d26e;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.slidingVertical p.visible {
+  opacity: 1;
+}
+
+@keyframes topToBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-12px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-12px);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+
+@media screen {
+}
