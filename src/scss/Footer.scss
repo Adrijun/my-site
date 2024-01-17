@@ -1,3 +1,5 @@
+@import '../scss/variables.scss';
+
 .footerContainer {
   margin-bottom: 0;
   width: 100vw;
@@ -23,7 +25,7 @@
 
 .footer-header {
   font-weight: bold;
-  color: white;
+  color: $primaryWhite;
   margin-top: 10vh;
 }
 
@@ -34,7 +36,7 @@
   width: 250px;
 }
 .linkhover {
-  color: #fff;
+  color: $primaryWhite;
   line-height: 1;
   margin-right: 8px;
   border-radius: 50%;
@@ -45,8 +47,8 @@
   padding: 10px;
 }
 .linkhover:hover {
-  background: #18d26e;
-  color: #fff;
+  background: $techGreen;
+  color: $primaryWhite;
 }
 
 @media (max-width: 768px) {

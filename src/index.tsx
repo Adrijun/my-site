@@ -9,6 +9,8 @@ import Portfolio from './components/Portfolio/Projects';
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
 import '../src/scss/Structure.scss';
+import ScrollToHash from './utils/ScrollToHash';
+// import '../src/App.scss';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,6 +19,7 @@ root.render(
   <>
     <React.StrictMode>
       <BrowserRouter>
+        <ScrollToHash />
         <Routes>
           <Route path="/" element={<Structure />}>
             <Route index element={<Main />} />

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import anonymPortfolio from '../../../assets/images/anonymPortfoliojpg2.jpg';
-import OpenInNewWindow from '../../../utils/utils';
+import OpenInNewWindow from '../../../utils/OpenInNewWindow';
 function Anonymous() {
   return (
     <Container className="box shadow rounded p-2 mb-1 project-wrapper">
@@ -33,7 +33,7 @@ function Anonymous() {
             <div className="button-group">
               <OpenInNewWindow
                 link="https://anonymous-pi.vercel.app/"
-                buttonText="Visit Website"
+                buttonText="Live Demo"
               />
               <OpenInNewWindow
                 link="https://github.com/Adrijun/React-Konva"

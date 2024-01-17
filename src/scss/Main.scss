@@ -1,3 +1,4 @@
+@import '../scss/variables.scss';
 main {
   overflow-x: hidden;
   overflow: hidden;
@@ -23,8 +24,8 @@ main {
 .title {
   width: 100%;
   height: 90%;
-  background-color: #000;
-  color: #fff;
+  background-color: $primaryBlack;
+  color: $primaryWhite;
   mix-blend-mode: multiply;
   h1 {
     font-weight: bolder;
@@ -47,7 +48,7 @@ main {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
@@ -68,10 +69,32 @@ main {
 }
 
 .cardsText {
-  color: white;
+  color: $primaryWhite;
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+}
+
+.carousel-indicators .active {
+  background-color: $techGreen;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: 0.7;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: $techGreen;
+  border-radius: 50%;
+
+  transition: box-shadow 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  box-shadow: 0 0 10px rgb(24, 210, 110);
 }
 
 @media only screen and (max-width: 768px) {
@@ -108,7 +131,7 @@ main {
     transform: scale(1.05);
   }
   .cardsText {
-    color: white;
+    color: $primaryWhite;
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;

@@ -51,7 +51,7 @@ function About() {
                       Gaussian blur effect when a notification is sent to the
                       client. With this feature, every image that the client
                       receives remains anonymous and GDPR safe. <br />
-                      <i>You can find more info under projects </i>
+                      <i>You can find more info about that under projects </i>
                     </p>
                   </article>
                   <article className="work mb-4">

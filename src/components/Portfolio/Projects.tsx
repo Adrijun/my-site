@@ -4,6 +4,7 @@ import '../../scss/Projects.scss';
 import Anonymous from './Projects/Anonymous';
 import Restaurant from './Projects/Restaurant';
 import Portfolio from './Projects/Portfolio';
+import WeatherForecast from './Projects/WeatherForecast';
 function Projects() {
   return (
     <>
@@ -15,6 +16,9 @@ function Projects() {
             className="mb-3  anonymous-portfolio d-flex align-items-center"
           >
             <Anonymous />
+          </Col>
+          <Col md={12} lg={12} className="mb-3">
+            <WeatherForecast />
           </Col>
           <Col md={12} lg={12} className="mb-3">
             <Restaurant />
