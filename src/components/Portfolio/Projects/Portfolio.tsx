@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import portfolioImage from '../../../assets/images/marten-bjork-6dW3xyQvcYE-unsplash.jpg';
-import OpenInNewWindow from '../../../utils/utils';
+import OpenInNewWindow from '../../../utils/OpenInNewWindow';
+
 export default function Portfolio() {
   return (
     <Container className="box shadow rounded p-2 mb-1 project-wrapper">
-      <h2>My Portfolio</h2>
+      <h2 id="portfolio">My Portfolio</h2>
       <Row lg={2}>
         <Col md={6} lg={4}>
           <div className="image-portfolios">

@@ -1,3 +1,4 @@
+@import '../scss/variables.scss';
 .spinnerContainer {
   position: relative;
   display: flex;
@@ -25,7 +26,7 @@
 
 .slidingVertical p {
   animation: topToBottom 12.5s linear infinite 0s;
-  color: #18d26e;
+  color: $techGreen;
   opacity: 0;
   overflow: hidden;
   position: absolute;

@@ -1,3 +1,4 @@
+@import '../scss/variables.scss';
 .menu-icon-bar {
   display: block;
   width: 30px;
@@ -18,7 +19,7 @@
 
 .open {
   margin-right: 5%;
-  background-color: rgb(24, 210, 110);
+  background-color: $techGreen;
 }
 
 .open:nth-child(1) {
@@ -51,7 +52,7 @@
   color: rgba(255, 255, 255, 0.7);
 }
 .navbar a:hover {
-  color: rgb(255, 255, 255);
+  color: $primaryWhite;
 }
 .navbar a:active,
 .navbar a:focus {
@@ -65,9 +66,8 @@
   left: 5%;
   width: 0%;
   height: 2px;
-  background-color: rgb(24, 210, 110);
+  background-color: $techGreen;
   transition: width 0.3s ease-out;
-  // margin-left: 5%;
   margin-top: 0;
   border-radius: 10px;
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Col, Row, Container } from 'react-bootstrap';
 import majojo from '../../../assets/images/Majojo.jpg';
-import OpenInNewWindow from '../../../utils/utils';
+import OpenInNewWindow from '../../../utils/OpenInNewWindow';
 export default function Restaurant() {
   return (
     <Container className="box shadow rounded p-2 mb-1 project-wrapper">
       <h2 id="restaurant">The restaurant</h2>
-      <Row lg={2}>
+      <Row>
         <Col md={6} lg={4}>
           <div className="image-portfolios">
             <img
@@ -28,7 +28,7 @@ export default function Restaurant() {
             <div className="button-group">
               <OpenInNewWindow
                 link="https://idyllic-cucurucho-f4089c.netlify.app/"
-                buttonText="Visit Website"
+                buttonText="Live Demo"
               />
               <OpenInNewWindow
                 link="https://github.com/Joelhagg/Restaurangen"
