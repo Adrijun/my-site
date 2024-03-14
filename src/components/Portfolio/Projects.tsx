@@ -5,6 +5,7 @@ import Anonymous from './Projects/Anonymous';
 import Restaurant from './Projects/Restaurant';
 import Portfolio from './Projects/Portfolio';
 import WeatherForecast from './Projects/WeatherForecast';
+import DigiPlanner from './Projects/DigiPlanner';
 function Projects() {
   return (
     <>
@@ -15,10 +16,13 @@ function Projects() {
             lg={12}
             className="mb-3  anonymous-portfolio d-flex align-items-center"
           >
-            <Anonymous />
+            <DigiPlanner />
           </Col>
           <Col md={12} lg={12} className="mb-3">
             <WeatherForecast />
+          </Col>
+          <Col md={12} lg={12} className="mb-3">
+            <Anonymous />
           </Col>
           <Col md={12} lg={12} className="mb-3">
             <Restaurant />
