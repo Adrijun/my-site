@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import postitbajen from '../../assets/images/postitbajen.jpg';
 import anonymPortfolio from '../../assets/images/anonymPortfoliojpg2.jpg';
 import majojo from '../../assets/images/Majojo.jpg';
 import portfolioImage from '../../assets/images/marten-bjork-6dW3xyQvcYE-unsplash.jpg';
@@ -34,6 +35,28 @@ function CarouselFunction() {
     <Row>
       <Col>
         <Carousel activeIndex={index} onSelect={handleSelect}>
+          <Carousel.Item>
+            <Link to={'/portfolio#digiplanner'}>
+              <div className="card-image-wrapper">
+                <Card.Img
+                  variant="top"
+                  src={postitbajen}
+                  alt="Digiplanner project"
+                  className="img-fluid mb-3 custom-img cardImage"
+                  width={'100%'}
+                  style={{ height: '70vh' }}
+                />
+                <div className="overlay" style={{ height: '70vh' }}>
+                  {isDesktop && <h3 className="cardsText">DigiPlanner</h3>}
+                  {isMobile && (
+                    <div className="overlay" style={{ height: '70vh' }}>
+                      <h3 className="cardsText">Read more</h3>{' '}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </Link>
+          </Carousel.Item>
           <Carousel.Item>
             <Link to={'/portfolio#anonymous'}>
               <div className="card-image-wrapper">
